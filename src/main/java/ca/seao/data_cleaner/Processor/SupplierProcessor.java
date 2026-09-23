@@ -6,22 +6,18 @@ import java.util.Scanner;
 
 import org.springframework.stereotype.Component;
 
-import ca.seao.data_cleaner.Config.ApplicationConfig;
 import ca.seao.data_cleaner.Dao.Supplier;
 import ca.seao.data_cleaner.Repository.Impl.SupplierRepository;
 
 @Component
 public class SupplierProcessor 
 {
-	private final ApplicationConfig config;
-	
 	private final SupplierRepository repo;
 	
 	private final Scanner scanner;
 	
-	public SupplierProcessor(ApplicationConfig config, SupplierRepository repo)
+	public SupplierProcessor(SupplierRepository repo)
 	{
-		this.config = config;
 		this.repo = repo;
 		this.scanner = new Scanner(System.in);
 	}
